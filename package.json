@@ -1,0 +1,41 @@
+{
+  "name": "jetsin_study_web",
+  "private": false,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "ant-design-vue": "^4.0.3",
+    "lodash": "^4.17.21",
+    "pinia": "^2.1.4",
+    "vue": "^3.3.4",
+    "vue-hooks-plus": "1.8.2",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^20.11.5",
+    "nuxt": "^3.6.2",
+    "nuxt-icon": "^0.4.2",
+    "nuxt-lodash": "^2.5.0",
+    "sass": "^1.63.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
