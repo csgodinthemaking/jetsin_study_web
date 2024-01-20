@@ -16,12 +16,12 @@
 
     <Meta property="og:title" content="Jetsin Study" />
     <Meta property="og:description" content="Jetsin Study" />
-    <Meta property="og:image" content="/favicon.ico" />
+    <Meta property="og:image" content="/favicon.jpg" />
     <Meta property="og:site_name" content="Jetsin Study" />
     <Meta property="og:type" content="website" />
     <Meta property="og:locale" content="en_US" />
 
-    <Link rel="icon" href="/favicon.ico" />
+    <Link rel="icon" href="/favicon.png" type="image/png" />
 
     <Link rel="preconnect" href="https://fonts.googleapis.com" />
     <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
