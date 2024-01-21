@@ -41,15 +41,19 @@ const props = defineProps({
         color: #fff;
     }
 
+
     &--outlined {
         color: var(--c-text);
         border: 2px solid var(--c-border);
         background-color: transparent;
 
         &:hover {
-            color: #fff;
+            color: var(--c-primary);
             border-color: var(--c-primary);
-            background-color: var(--c-primary);
+        }
+
+        &:active {
+            background-color: transparent;
         }
     }
 }
