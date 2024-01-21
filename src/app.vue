@@ -45,7 +45,7 @@
 // Vue
 import { onBeforeMount } from "vue";
 // Store
-import { useUser } from "@/stores/user";
+import { useUser } from "@/store/user";
 // Antd
 import enUS from "ant-design-vue/locale/en_US";
 import { ANTD_THEME } from '@/constants/antd';
@@ -70,3 +70,4 @@ onBeforeMount(() => {
   filter: blur(2px);
 }
 </style>
+store/user
