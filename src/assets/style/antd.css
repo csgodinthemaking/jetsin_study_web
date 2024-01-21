@@ -4,3 +4,8 @@
   font-size: 16px;
   color: var(--c-text);
 }
+
+.ant-modal-content .ant-modal-header .ant-modal-title {
+  font-weight: 500;
+  color: var(--c-heading);
+}
