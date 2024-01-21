@@ -20,8 +20,6 @@ const props = defineProps({
     }
 });
 
-
-console.log('props.password: ', props.password);
 </script>
 
 <style scoped lang="scss">
