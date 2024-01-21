@@ -15,7 +15,7 @@
  */
 
 export const localStorage = {
-  get(key, defaultValue, deserializer?) {
+  get(key, defaultValue, deserializer) {
     if (!window) return defaultValue;
 
     let data = window.localStorage.getItem(key);
@@ -45,7 +45,7 @@ export const localStorage = {
     return defaultValue;
   },
 
-  set(key, value, serializer?) {
+  set(key, value, serializer) {
     if (!window) return;
 
     // 执行序列化
