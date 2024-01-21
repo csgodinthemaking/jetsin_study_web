@@ -1,5 +1,6 @@
 <template>
-    <a-button class="button" :class="[`button--${props.variant}`]">
+    <a-button class="button"
+        :class="{ [`button--${props.variant}`]: true, 'button--icon': props.icon, 'button--block': props.block }">
         <slot></slot>
     </a-button>
 </template>
@@ -15,6 +16,14 @@ const props = defineProps({
         // 'primary' | 'outlined'
         type: String,
         default: 'primary'
+    },
+    icon: {
+        type: Boolean,
+        default: false,
+    },
+    block: {
+        type: Boolean,
+        default: false,
     }
 });
 
@@ -55,6 +64,14 @@ const props = defineProps({
         &:active {
             background-color: transparent;
         }
+    }
+
+    &--icon {
+        @include flexCenter;
+    }
+
+    &--block {
+        width: 100%;
     }
 }
 </style>
