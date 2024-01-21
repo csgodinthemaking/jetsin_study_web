@@ -1,5 +1,7 @@
 // 大菠萝
 import { defineStore } from "pinia";
+// Utils
+import { localStorage } from "@/utils";
 
 export const defaultUserState = {
   id: -1,
