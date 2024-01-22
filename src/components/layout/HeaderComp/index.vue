@@ -1,5 +1,5 @@
 <template>
-    <header class="itisit-container header">
+    <header class="itisit-container header" :class="{ 'header--bg': showBackgroud }">
         <Logo />
         <NavLink />
         <ButtonComp class="auth-btn" variant="outlined" @click="globalState.authModalVisible = true">
@@ -20,6 +20,8 @@
 import { defineComponent, ref } from 'vue';
 // Store
 import { useGlobalState } from '@/store/globalState';
+// Hooks
+import { useEventListener } from 'vue-hooks-plus';
 // Components
 import Logo from './Logo.vue';
 import NavLink from './NavLink.vue';
@@ -31,6 +33,13 @@ defineComponent({ name: 'Logo' });
 
 const globalState = useGlobalState();
 const isMobileMenuOpened = ref(false);
+const showBackgroud = ref(false);
+
+const handleScroll = () => {
+    const scrollTop = document.documentElement.scrollTop;
+    showBackgroud.value = scrollTop > 40;
+}
+useEventListener('scroll', handleScroll);
 </script>
 
 <style scoped lang="scss">
@@ -40,8 +49,13 @@ const isMobileMenuOpened = ref(false);
     width: 100%;
     height: 104px;
     background-color: transparent;
+    transition: background-color var(--transition);
     @include flex($alignItems: center, $gap: 16px);
     @include positioned($position: fixed, $top: 0, $left: 0, $zIndex: 40);
+
+    &--bg {
+        background-color: var(--c-background);
+    }
 
     .auth-btn {
         margin-left: auto;
