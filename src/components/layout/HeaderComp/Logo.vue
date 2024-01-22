@@ -21,7 +21,7 @@ defineComponent({ name: 'Logo' });
 
 .logo {
     cursor: pointer;
-    @include flex($alignItems: center, $gap: 8px);
+    @include flex($alignItems: center);
 
     img {
         width: 60px;
@@ -30,6 +30,7 @@ defineComponent({ name: 'Logo' });
     }
 
     .col {
+        margin-left: 8px;
         @include flex($direction: column, $alignItems: center, $gap: 1px);
 
         span {
@@ -38,6 +39,17 @@ defineComponent({ name: 'Logo' });
 
             &:first-child {
                 color: var(--c-primary);
+            }
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 800px) {
+            margin-left: 12px;
+            flex-direction: row;
+            gap: 8px;
+
+            span {
+                font-size: 22px;
             }
         }
     }
