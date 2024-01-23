@@ -17,7 +17,7 @@
 
 <script setup>
 // Vue
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 // Store
 import { useGlobalState } from '@/store/globalState';
 // Hooks
@@ -39,7 +39,7 @@ const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
     showBackgroud.value = scrollTop > 40;
 }
-useEventListener('scroll', handleScroll);
+onMounted(() => useEventListener('scroll', handleScroll));
 </script>
 
 <style scoped lang="scss">
