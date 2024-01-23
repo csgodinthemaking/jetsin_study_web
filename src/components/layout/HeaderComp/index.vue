@@ -1,17 +1,19 @@
 <template>
-    <header class="itisit-container header" :class="{ 'header--bg': showBackgroud }">
-        <Logo />
-        <NavLink />
-        <ButtonComp class="auth-btn" variant="outlined" @click="globalState.authModalVisible = true">
-            Login / Register
-        </ButtonComp>
-        <ButtonComp icon variant="outlined" class="toggle-btn" @click="isMobileMenuOpened = !isMobileMenuOpened">
-            <Icon v-if="!isMobileMenuOpened" name="ri-menu-fill" />
-            <Icon v-else name="ooui:close" />
-        </ButtonComp>
-        <AuthModal />
-        <MobileMenu :open="isMobileMenuOpened" />
-    </header>
+    <div class="header-wrap">
+        <header class="itisit-container header" :class="{ 'header--bg': showBackgroud }">
+            <Logo />
+            <NavLink />
+            <ButtonComp class="auth-btn" variant="outlined" @click="globalState.authModalVisible = true">
+                Login / Register
+            </ButtonComp>
+            <ButtonComp icon variant="outlined" class="toggle-btn" @click="isMobileMenuOpened = !isMobileMenuOpened">
+                <Icon v-if="!isMobileMenuOpened" name="ri-menu-fill" />
+                <Icon v-else name="ooui:close" />
+            </ButtonComp>
+            <AuthModal />
+            <MobileMenu :open="isMobileMenuOpened" />
+        </header>
+    </div>
     <div class="header-helper"></div>
 </template>
 
@@ -51,7 +53,6 @@ onMounted(() => useEventListener('scroll', handleScroll));
     background-color: transparent;
     transition: background-color var(--transition);
     @include flex($alignItems: center, $gap: 16px);
-    @include positioned($position: fixed, $top: 0, $left: 0, $zIndex: 40);
 
     &--bg {
         background-color: var(--c-background);
@@ -80,6 +81,11 @@ onMounted(() => useEventListener('scroll', handleScroll));
             display: flex;
         }
     }
+}
+
+.header-wrap {
+    width: 100%;
+    @include positioned($position: fixed, $top: 0, $left: 0, $zIndex: 40);
 }
 
 .header-helper {
