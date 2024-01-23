@@ -40,6 +40,7 @@ defineComponent({ name: 'BannerSection' });
 @import '@/assets/style/mixins.scss';
 
 .banner-section {
+    margin-right: 0;
     padding-right: 0;
     @include flex($gap: 48px);
 
@@ -69,6 +70,7 @@ defineComponent({ name: 'BannerSection' });
         }
 
         .search {
+            width: 100%;
             height: 45px;
             @include flex;
 
@@ -116,10 +118,6 @@ defineComponent({ name: 'BannerSection' });
 
             .letters span {
                 font-size: 50px;
-            }
-
-            .search {
-                width: 100%;
             }
         }
 
